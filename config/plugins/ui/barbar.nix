@@ -15,8 +15,8 @@
       silent = true;
 
       close = "<C-c>";
-      movePrevious = "<M-,>";
-      moveNext = "<M-.>";
+      previous = "<M-,>";
+      next = "<M-.>";
 
       pick = "<leader>b";
     };

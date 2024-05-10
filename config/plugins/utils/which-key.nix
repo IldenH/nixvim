@@ -1,6 +1,9 @@
 {
   plugins.which-key = {
     enable = true;
+		registrations = {
+      "<leader>f".name = " Files";
+		};
     icons = {
       separator = "➜";
       group = "";

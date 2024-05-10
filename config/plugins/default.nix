@@ -2,6 +2,7 @@
 
 {
 	imports = [
+		./files
 		./ui
 		./utils
 	];

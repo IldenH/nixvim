@@ -18,7 +18,11 @@
       movePrevious = "<M-,>";
       moveNext = "<M-.>";
 
-      pick = "<leader>bo";
+      pick = "<leader>b";
     };
   };
+
+	plugins.which-key.registrations = {
+		"<leader>b" = " Buffers";
+	};
 }

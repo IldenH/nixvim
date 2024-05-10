@@ -2,7 +2,7 @@
 
 {
 	imports = [
-		./ui
-		./utils
+		./hop.nix
+		./which-key.nix
 	];
 }

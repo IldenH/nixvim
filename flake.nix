@@ -27,12 +27,20 @@
       }: let
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
-        nixvimModule = {
+        nixvimModule = let
+          mkKeymap = mode: key: action: desc: {
+            inherit mode key action;
+            options = {
+              inherit desc;
+              silent = true;
+              noremap = true;
+            };
+					};
+				in {
           inherit pkgs;
-          module = import ./config; # import the module directly
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
+          module = import ./config;
           extraSpecialArgs = {
-            # inherit (inputs) foo;
+						inherit mkKeymap;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

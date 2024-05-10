@@ -8,6 +8,7 @@
 	colorschemes.gruvbox.enable = true;
 
   plugins = {
+		dressing.enable = true;
 		gitsigns.enable = true;
   };
 }

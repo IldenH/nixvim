@@ -3,6 +3,7 @@
     enable = true;
 		registrations = {
       "<leader>f".name = " Files";
+			"<leader>l".name = " LSP";
 		};
     icons = {
       separator = "➜";

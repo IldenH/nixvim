@@ -5,6 +5,12 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # Plugins not in nixpkgs
+    move = {
+      url = "github:fedepujol/move.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -40,7 +46,7 @@
           inherit pkgs;
           module = import ./config;
           extraSpecialArgs = {
-            inherit mkKeymap;
+            inherit inputs mkKeymap;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

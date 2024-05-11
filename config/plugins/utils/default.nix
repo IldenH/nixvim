@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hop.nix
+    ./move.nix
     ./sessions.nix
     ./which-key.nix
   ];

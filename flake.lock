@@ -185,6 +185,22 @@
         "type": "github"
       }
     },
+    "move": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1706727882,
+        "narHash": "sha256-aJi7r9yPdQyH6i8EtQzKdRhEQ3SLz32oqcN0tf2qRZA=",
+        "owner": "fedepujol",
+        "repo": "move.nvim",
+        "rev": "cccbd4ea9049ca5f99f025ffaddb7392359c7d6a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fedepujol",
+        "repo": "move.nvim",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -307,6 +323,7 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
+        "move": "move",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"
       }

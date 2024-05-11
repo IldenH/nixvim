@@ -35,12 +35,12 @@
               silent = true;
               noremap = true;
             };
-					};
-				in {
+          };
+        in {
           inherit pkgs;
           module = import ./config;
           extraSpecialArgs = {
-						inherit mkKeymap;
+            inherit mkKeymap;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
@@ -53,6 +53,13 @@
         packages = {
           # Lets you run `nix run .` to start nixvim
           default = nvim;
+        };
+
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            nil
+            alejandra
+          ];
         };
       };
     };

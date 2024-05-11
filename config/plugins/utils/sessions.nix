@@ -1,6 +1,4 @@
-{ mkKeymap, ... }: 
-
-{
+{mkKeymap, ...}: {
   plugins.auto-session = {
     enable = true;
     autoRestore.enabled = false;

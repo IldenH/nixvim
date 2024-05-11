@@ -1,14 +1,14 @@
 {
-	imports = [
-		./barbar.nix
-		./indent-blankline.nix
-		./lualine.nix
-	];
+  imports = [
+    ./barbar.nix
+    ./indent-blankline.nix
+    ./lualine.nix
+  ];
 
-	colorschemes.gruvbox.enable = true;
+  colorschemes.gruvbox.enable = true;
 
   plugins = {
-		dressing.enable = true;
-		gitsigns.enable = true;
+    dressing.enable = true;
+    gitsigns.enable = true;
   };
 }

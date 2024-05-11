@@ -1,6 +1,4 @@
-{ mkKeymap, ... }:
-
-{
+{mkKeymap, ...}: {
   plugins.lsp = {
     # LSPs and formatters should be installed through devshells
     enable = true;

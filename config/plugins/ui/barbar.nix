@@ -22,7 +22,7 @@
     };
   };
 
-	plugins.which-key.registrations = {
-		"<leader>b" = " Buffers";
-	};
+  plugins.which-key.registrations = {
+    "<leader>b" = " Buffers";
+  };
 }

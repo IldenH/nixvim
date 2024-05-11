@@ -1,10 +1,10 @@
 {
   plugins.which-key = {
     enable = true;
-		registrations = {
+    registrations = {
       "<leader>f".name = " Files";
-			"<leader>l".name = " LSP";
-		};
+      "<leader>l".name = " LSP";
+    };
     icons = {
       separator = "➜";
       group = "";

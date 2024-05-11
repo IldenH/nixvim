@@ -1,10 +1,8 @@
-{ ... }:
-
-{
-	imports = [
-		./files
-		./lsp
-		./ui
-		./utils
-	];
+{...}: {
+  imports = [
+    ./files
+    ./lsp
+    ./ui
+    ./utils
+  ];
 }

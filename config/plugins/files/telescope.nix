@@ -22,25 +22,25 @@
       "<leader>fg" = "git_files";
       "<leader>ft" = "git_status";
     };
-		settings.defaults = {
-			mappings = {
-				i = {
-					"<esc>".__raw = ''
-						function(...) return require("telescope.actions").close(...) end
-					'';
-					"<C-k>".__raw = ''
-						function(...) return require("telescope.actions").move_selection_previous(...) end
-					'';
-					"<C-j>".__raw = ''
-						function(...) return require("telescope.actions").move_selection_next(...) end
-					'';
-				};
-			};
-		};
+    settings.defaults = {
+      mappings = {
+        i = {
+          "<esc>".__raw = ''
+            function(...) return require("telescope.actions").close(...) end
+          '';
+          "<C-k>".__raw = ''
+            function(...) return require("telescope.actions").move_selection_previous(...) end
+          '';
+          "<C-j>".__raw = ''
+            function(...) return require("telescope.actions").move_selection_next(...) end
+          '';
+        };
+      };
+    };
   };
-	plugins.which-key.registrations = {
+  plugins.which-key.registrations = {
     "<leader>fb" = " Branches";
     "<leader>fg" = " Files";
     "<leader>ft" = " Status";
-	};
+  };
 }

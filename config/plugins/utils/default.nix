@@ -2,6 +2,7 @@
   imports = [
     ./hop.nix
     ./move.nix
+    ./oil.nix
     ./sessions.nix
     ./which-key.nix
   ];

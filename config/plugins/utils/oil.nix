@@ -5,10 +5,9 @@
       delete_to_trash = true;
       view_options = {
         show_hidden = true;
-        # ../ doesn't work and there is probably a better way to do this
         is_always_hidden = ''
           function(name)
-            if name == ".git" or name == ".direnv" or name == "../" then
+            if name == ".git" or name == ".direnv" then
               return true
             end
           end

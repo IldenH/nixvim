@@ -6,18 +6,9 @@
     };
     keymapsSilent = true;
     keymaps = {
-      "<leader>ff" = {
-        action = "find_files";
-        options.desc = "Telescope";
-      };
-      "<leader>fs" = {
-        action = "live_grep";
-        options.desc = "Search";
-      };
-      "<leader>fr" = {
-        action = "oldfiles";
-        options.desc = "Recent";
-      };
+      "<leader>ff" = "find_files";
+      "<leader>fs" = "live_grep";
+      "<leader>fr" = "oldfiles";
       "<leader>fb" = "git_branches";
       "<leader>fg" = "git_files";
       "<leader>ft" = "git_status";
@@ -39,6 +30,9 @@
     };
   };
   plugins.which-key.registrations = {
+    "<leader>ff" = " Find";
+    "<leader>fs" = " Search";
+    "<leader>fr" = " Recent";
     "<leader>fb" = " Branches";
     "<leader>fg" = " Files";
     "<leader>ft" = " Status";

@@ -1,5 +1,6 @@
 {mkKeymap, ...}: {
   imports = [
+    ./cmp.nix
     ./treesitter.nix
     ./vimtex.nix
   ];

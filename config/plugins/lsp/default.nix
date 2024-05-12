@@ -1,5 +1,6 @@
 {mkKeymap, ...}: {
   imports = [
+    ./treesitter.nix
     ./vimtex.nix
   ];
 

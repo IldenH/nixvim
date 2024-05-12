@@ -81,8 +81,8 @@
   };
 
   keymaps = [
-    (mkKeymap "n" "<leader>lR" ":LspRestart<cr>" "Restart")
-    (mkKeymap "n" "<leader>lI" ":LspInfo<cr>" "Info")
+    (mkKeymap "n" "<leader>lR" "<cmd>LspRestart<cr>" "Restart")
+    (mkKeymap "n" "<leader>lI" "<cmd>LspInfo<cr>" "Info")
   ];
 
   plugins.conform-nvim = {

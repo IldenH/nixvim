@@ -12,6 +12,6 @@
   };
 
   keymaps = [
-    (mkKeymap "n" "<leader>s" ":SessionRestore<cr>" " Restore Session")
+    (mkKeymap "n" "<leader>s" "<cmd>SessionRestore<cr>" " Restore Session")
   ];
 }

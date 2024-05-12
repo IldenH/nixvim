@@ -3,6 +3,7 @@
     enable = true;
     registrations = {
       "<leader>f".name = " Files";
+      "<leader>t".name = " LaTeX";
       "<leader>l".name = " LSP";
     };
     icons = {

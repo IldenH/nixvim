@@ -1,4 +1,8 @@
 {mkKeymap, ...}: {
+  imports = [
+    ./vimtex.nix
+  ];
+
   plugins.lsp = {
     # LSPs and formatters should be installed through devshells
     enable = true;

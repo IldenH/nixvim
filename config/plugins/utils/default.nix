@@ -14,5 +14,8 @@
 
   extraPlugins = with pkgs.vimPlugins; [
     mkdir-nvim
+    guess-indent-nvim
   ];
+
+  extraConfigLua = ''require("guess-indent").setup({})'';
 }

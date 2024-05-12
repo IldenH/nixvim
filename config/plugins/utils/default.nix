@@ -4,6 +4,7 @@
     ./move.nix
     ./oil.nix
     ./sessions.nix
+    ./telescope.nix
     ./which-key.nix
   ];
 

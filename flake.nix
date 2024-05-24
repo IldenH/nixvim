@@ -66,6 +66,8 @@
           nativeBuildInputs = with pkgs; [
             nil
             alejandra
+            lua-language-server
+            stylua
           ];
         };
       };

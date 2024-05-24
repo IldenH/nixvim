@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hop.nix
+    ./luasnip
     ./move.nix
     ./oil.nix
     ./sessions.nix

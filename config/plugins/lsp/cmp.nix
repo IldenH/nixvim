@@ -16,8 +16,19 @@
           {name = "nvim_lsp";}
           {name = "nvim_lsp_document_symbol";}
           {name = "nvim_lsp_signature_help";}
+          {name = "luasnip";}
           {name = "path";}
         ];
+
+        snippet.expand =
+          /*
+          lua
+          */
+          ''
+            function(args)
+            	require("luasnip").lsp_expand(args.body)
+            end
+          '';
 
         mapping = {
           "<C-b>" = "cmp.mapping.scroll_docs(-4)";
@@ -62,6 +73,9 @@
             */
             ''
               cmp.mapping(function(fallback)
+                if require("luasnip").expand_or_locally_jumpable() then
+                  require("luasnip").expand_or_jump()
+                end
                 if cmp.visible() then
                   if #cmp.get_entries() == 1 then
                     cmp.confirm({ select = true })
@@ -86,5 +100,6 @@
     cmp-nvim-lsp-document-symbol.enable = true;
     cmp-nvim-lsp-signature-help.enable = true;
     cmp-nvim-lua.enable = true;
+    cmp_luasnip.enable = true;
   };
 }

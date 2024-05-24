@@ -8,12 +8,11 @@
       enable_autosnippets = true;
       history = false;
     };
-    # TODO:
-    # fromLua = [
-    #   {
-    #     paths = ./snippets;
-    #     lazyLoad = true;
-    #   }
-    # ];
+    fromLua = [
+      {
+        paths = ./snippets;
+        lazyLoad = true;
+      }
+    ];
   };
 }

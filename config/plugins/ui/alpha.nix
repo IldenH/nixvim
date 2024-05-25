@@ -51,7 +51,7 @@
               position = "center";
               shortcut = shortcut;
               cursor = 3;
-              width = 50;
+              width = 40;
               align_shortcut = "right";
               hl_shortcut = "Type";
             };

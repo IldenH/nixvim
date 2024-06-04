@@ -1,24 +1,24 @@
 {
   plugins.barbar = {
     enable = true;
-    animation = false;
-    autoHide = false;
-    clickable = true;
-    focusOnClose = "left";
-    insertAtEnd = false;
-    insertAtStart = false;
-    maximumLength = 30;
-    maximumPadding = 2;
-    minimumPadding = 1;
-    noNameTitle = "[No Name]";
+    settings = {
+      animation = false;
+      auto_hide = false;
+      clickable = true;
+      focus_on_close = "left";
+      insert_at_end = false;
+      insert_at_start = false;
+      maximum_length = 30;
+      maximum_padding = 2;
+      minimum_padding = 1;
+      no_name_title = "[No Name]";
+    };
     keymaps = {
-      silent = true;
+      close.key = "<C-c>";
+      previous.key = "<M-,>";
+      next.key = "<M-.>";
 
-      close = "<C-c>";
-      previous = "<M-,>";
-      next = "<M-.>";
-
-      pick = "<leader>b";
+      pick.key = "<leader>b";
     };
   };
 

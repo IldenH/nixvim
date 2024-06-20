@@ -7,6 +7,6 @@
   };
 
   keymaps = [
-    (mkKeymap "n" "<leader><space>" "<cmd>HopWord<cr>" "Hop")
+    (mkKeymap "n" "<leader><space>" "<cmd>HopChar1<cr>" "Hop")
   ];
 }

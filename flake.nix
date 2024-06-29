@@ -19,12 +19,7 @@
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
+      systems = inputs.nixpkgs.lib.systems.flakeExposed;
 
       perSystem = {
         pkgs,
@@ -45,25 +40,15 @@
         in {
           inherit pkgs;
           module = import ./config;
-          extraSpecialArgs = {
-            inherit inputs mkKeymap;
-          };
+          extraSpecialArgs = {inherit inputs mkKeymap;};
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {
-        checks = {
-          # Run `nix flake check .` to verify that your config is not broken
-          default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-        };
-
-        packages = {
-          # Lets you run `nix run .` to start nixvim
-          default = nvim;
-          nvim = nvim;
-        };
+        checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+        packages.default = nvim;
 
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
+          packages = with pkgs; [
             nixd
             alejandra
             lua-language-server

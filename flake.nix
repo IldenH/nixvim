@@ -64,7 +64,7 @@
 
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
-            nil
+            nixd
             alejandra
             lua-language-server
             stylua

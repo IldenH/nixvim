@@ -37,7 +37,7 @@
         enable = true;
         package = null;
       };
-      nil-ls = {
+      nixd = {
         enable = true;
         package = null;
       };

@@ -40,6 +40,9 @@
       nixd = {
         enable = true;
         package = null;
+        settings = {
+          diagnostic.suppress = ["sema-escaping-with" "var-bind-to-this"];
+        };
       };
       rust-analyzer = {
         enable = true;

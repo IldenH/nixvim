@@ -37,10 +37,14 @@
               noremap = true;
             };
           };
+          mkRegistration = key: desc: {
+            __unkeyed-1 = key;
+            inherit desc;
+          };
         in {
           inherit pkgs;
           module = import ./config;
-          extraSpecialArgs = {inherit inputs mkKeymap;};
+          extraSpecialArgs = {inherit inputs mkKeymap mkRegistration;};
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {

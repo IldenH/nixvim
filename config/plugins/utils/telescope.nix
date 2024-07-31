@@ -1,4 +1,4 @@
-{
+{mkRegistration, ...}: {
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -28,12 +28,12 @@
       };
     };
   };
-  plugins.which-key.registrations = {
-    "<leader>ff" = " Find";
-    "<leader>fs" = " Search";
-    "<leader>fr" = " Recent";
-    "<leader>fb" = " Branches";
-    "<leader>fg" = " Files";
-    "<leader>ft" = " Status";
-  };
+  plugins.which-key.settings.spec = [
+    (mkRegistration "<leader>ff" " Find")
+    (mkRegistration "<leader>fs" " Search")
+    (mkRegistration "<leader>fr" " Recent")
+    (mkRegistration "<leader>fb" " Branches")
+    (mkRegistration "<leader>fg" " Files")
+    (mkRegistration "<leader>ft" " Status")
+  ];
 }

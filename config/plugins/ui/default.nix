@@ -1,4 +1,4 @@
-{
+{...}: {
   imports = [
     ./alpha.nix
     ./barbar.nix

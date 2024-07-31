@@ -1,4 +1,4 @@
-{
+{mkRegistration, ...}: {
   plugins.barbar = {
     enable = true;
     settings = {
@@ -22,7 +22,7 @@
     };
   };
 
-  plugins.which-key.registrations = {
-    "<leader>b" = " Buffers";
-  };
+  plugins.which-key.settings.spec = [
+    (mkRegistration "<leader>b" " Buffers")
+  ];
 }

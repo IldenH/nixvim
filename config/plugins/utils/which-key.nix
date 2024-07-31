@@ -1,11 +1,11 @@
-{
+{mkRegistration, ...}: {
   plugins.which-key = {
     enable = true;
-    registrations = {
-      "<leader>f".name = " Files";
-      "<leader>t".name = " LaTeX";
-      "<leader>l".name = " LSP";
-    };
+    settings.spec = [
+      (mkRegistration "<leader>f" " Files")
+      (mkRegistration "<leader>t" " LaTeX")
+      (mkRegistration "<leader>l" " LSP")
+    ];
     icons = {
       separator = "➜";
       group = "";

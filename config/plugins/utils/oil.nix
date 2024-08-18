@@ -17,7 +17,6 @@
   };
 
   keymaps = [
-    # pencil unicode looks a bit strange
-    (mkKeymap "n" "<leader>fe" "<cmd>Oil<cr>" "✎ Edit")
+    (mkKeymap "n" "<leader>fe" "<cmd>Oil<cr>" "󱇨 Edit")
   ];
 }

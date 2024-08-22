@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./cmp.nix
+    ./spellcheck.nix
     ./treesitter.nix
     ./vimtex.nix
   ];

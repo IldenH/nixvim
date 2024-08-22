@@ -3,6 +3,7 @@
     ./hop.nix
     ./luasnip
     ./move.nix
+    ./obsidian.nix
     ./oil.nix
     ./sessions.nix
     ./telescope.nix

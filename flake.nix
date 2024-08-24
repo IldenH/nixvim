@@ -11,6 +11,16 @@
       url = "github:fedepujol/move.nvim";
       flake = false;
     };
+
+    cmp-vimtex = {
+      url = "github:micangl/cmp-vimtex";
+      flake = false;
+    };
+
+    cmp-nerdfont = {
+      url = "github:chrisgrieser/cmp-nerdfont";
+      flake = false;
+    };
   };
 
   outputs = {

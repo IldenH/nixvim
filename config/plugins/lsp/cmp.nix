@@ -1,4 +1,8 @@
-{...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   # https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings
   extraConfigLuaPre = ''
     local has_words_before = function()
@@ -18,6 +22,12 @@
           {name = "nvim_lsp_signature_help";}
           {name = "luasnip";}
           {name = "path";}
+          {name = "calc";}
+          {name = "emoji";}
+          {name = "latex_symbols";}
+          {name = "nerdfont";}
+          {name = "vimtex";}
+          {name = "spell";}
         ];
 
         snippet.expand =
@@ -102,4 +112,15 @@
     cmp-nvim-lua.enable = true;
     cmp_luasnip.enable = true;
   };
+
+  extraPlugins = with pkgs.vimUtils; [
+    (buildVimPlugin {
+      name = "cmp-nerdfont";
+      src = inputs.cmp-nerdfont;
+    })
+    (buildVimPlugin {
+      name = "cmp-vimtex";
+      src = inputs.cmp-vimtex;
+    })
+  ];
 }

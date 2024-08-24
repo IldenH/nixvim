@@ -106,15 +106,15 @@
       timeoutMs = 500;
     };
     formattersByFt = {
-      html = [["prettierd" "prettier"]];
-      css = [["prettierd" "prettier"]];
-      javascript = [["prettierd" "prettier"]];
-      javascriptreact = [["prettierd" "prettier"]];
-      typescript = [["prettierd" "prettier"]];
+      html = ["prettierd"];
+      css = ["prettierd"];
+      javascript = ["prettierd"];
+      javascriptreact = ["prettierd"];
+      typescript = ["prettierd"];
       python = ["black"];
       lua = ["stylua"];
       nix = ["alejandra"];
-      markdown = [["prettierd" "prettier"]];
+      markdown = ["prettierd"];
       rust = ["rustfmt"];
     };
   };

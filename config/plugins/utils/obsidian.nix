@@ -14,6 +14,7 @@
       ];
 
       notes_subdir = "notes";
+      new_notes_location = "notes_subdir";
       templates.subdir = "templates";
       attachments.img_folder = "assets";
 
@@ -32,10 +33,8 @@
           function(title)
             local name = ""
             if title ~= nil then
-              -- If title is given, transform it into valid file name.
-              name = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+              name = title:gsub(" ", "-"):lower():gsub("[^a-z0-9-æøå]", "")
             else
-              -- If title is nil, just add 4 random uppercase letters to the name.
               for _ = 1, 4 do
                 name = name .. string.char(math.random(65, 90))
               end
@@ -54,6 +53,7 @@
     (mkKeymap "n" "<leader>on" "<cmd>ObsidianNew<cr>" " New note")
     (mkKeymap "n" "<leader>op" "<cmd>ObsidianOpen<cr>" " Open")
     (mkKeymap "n" "<leader>or" "<cmd>ObsidianRename<cr>" "󱇨 Rename")
+    (mkKeymap "x" "<leader>oe" ":ObsidianExtractNote<cr>" "󰩭 Extract note")
     (mkKeymap "n" "<leader>ob" "<cmd>ObsidianBacklinks<cr>" " Backlinks")
     (mkKeymap "n" "<leader>of" "<cmd>ObsidianQuickSwitch<cr>" " Find")
     (mkKeymap "n" "<leader>os" "<cmd>ObsidianSearch<cr>" " Search")

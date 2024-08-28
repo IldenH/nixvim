@@ -1,12 +1,10 @@
 {...}: {
   plugins.treesitter = {
     enable = true;
+    nixvimInjections = true;
     settings = {
       indent.enable = true;
-      disabledLanguages = [
-        "tex"
-        "latex"
-      ];
+      highlight.enable = true;
     };
   };
 }

@@ -3,6 +3,11 @@
   mkKeymap,
   ...
 }: {
+  imports = [
+    ./bridge.nix
+    ./markdown.nix
+  ];
+
   plugins.obsidian = {
     enable = true;
     settings = {

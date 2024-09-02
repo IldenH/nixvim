@@ -6,6 +6,8 @@
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    nix-colors.url = "github:misterio77/nix-colors";
+
     # Plugins not in nixpkgs
     move = {
       url = "github:fedepujol/move.nvim";
@@ -19,6 +21,11 @@
 
     cmp-nerdfont = {
       url = "github:chrisgrieser/cmp-nerdfont";
+      flake = false;
+    };
+
+    obsidian-bridge = {
+      url = "github:oflisback/obsidian-bridge.nvim";
       flake = false;
     };
   };
@@ -51,10 +58,11 @@
             __unkeyed-1 = key;
             inherit desc;
           };
+          colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
         in {
           inherit pkgs;
           module = import ./config;
-          extraSpecialArgs = {inherit inputs mkKeymap mkRegistration;};
+          extraSpecialArgs = {inherit inputs mkKeymap mkRegistration colorScheme;};
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {

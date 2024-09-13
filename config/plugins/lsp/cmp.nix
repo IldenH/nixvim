@@ -27,7 +27,7 @@
           {name = "latex_symbols";}
           {name = "nerdfont";}
           {name = "vimtex";}
-          {name = "spell";}
+          # {name = "spell";} # laggy sometimes
         ];
 
         snippet.expand =

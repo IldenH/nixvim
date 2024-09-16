@@ -392,6 +392,26 @@
         "type": "github"
       }
     },
+    "obsidian-todo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1726216691,
+        "narHash": "sha256-Tdn8+grqPugCG9h8xckEILsNeIcAu37rK178vBbh79c=",
+        "owner": "LilleAila",
+        "repo": "obsidian-todo.nvim",
+        "rev": "c2e616c88af72ec16774469727d167c45a84545c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LilleAila",
+        "repo": "obsidian-todo.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "cmp-nerdfont": "cmp-nerdfont",
@@ -401,7 +421,8 @@
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "obsidian-bridge": "obsidian-bridge"
+        "obsidian-bridge": "obsidian-bridge",
+        "obsidian-todo": "obsidian-todo"
       }
     },
     "systems": {

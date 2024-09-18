@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./diagrams.nix
     ./hop.nix
     ./luasnip
     ./move.nix

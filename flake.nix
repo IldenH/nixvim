@@ -33,6 +33,11 @@
       url = "github:LilleAila/obsidian-todo.nvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    data-viewer = {
+      url = "github:VidocqH/data-viewer.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

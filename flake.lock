@@ -48,6 +48,22 @@
         "type": "github"
       }
     },
+    "data-viewer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699002688,
+        "narHash": "sha256-D5hvLhsYski11H9qiDDL2zlZMtYmbpHgpewiWR6C7rE=",
+        "owner": "VidocqH",
+        "repo": "data-viewer.nvim",
+        "rev": "40ddf37bb7ab6c04ff9e820812d1539afe691668",
+        "type": "github"
+      },
+      "original": {
+        "owner": "VidocqH",
+        "repo": "data-viewer.nvim",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -416,6 +432,7 @@
       "inputs": {
         "cmp-nerdfont": "cmp-nerdfont",
         "cmp-vimtex": "cmp-vimtex",
+        "data-viewer": "data-viewer",
         "flake-parts": "flake-parts",
         "move": "move",
         "nix-colors": "nix-colors",

@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./data-viewer.nix
     ./diagrams.nix
     ./hop.nix
     ./luasnip
@@ -21,5 +22,7 @@
     guess-indent-nvim
   ];
 
-  extraConfigLua = ''require("guess-indent").setup({})'';
+  extraConfigLua = ''
+    require("guess-indent").setup({})
+  '';
 }

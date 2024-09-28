@@ -32,7 +32,7 @@ in {
     # :h spellfile, :h spelllang
     # The spellfile for the global lang is always enabled
     # Whichever file comes first in `spellfile`or `spf` is the one that gets written to
-    _mkSpell = lang: "spl=${lang},${global_lang} spf=${mkSpellFile lang},${global_file}<cr>";
+    _mkSpell = lang: "spl=${lang},${global_lang} spf=${mkSpellFile lang},${global_file} | :setlocal spell<cr>";
     mkSpell = lang: ":set ${_mkSpell lang}";
     mkSpellBuffer = lang: ":setlocal ${_mkSpell lang}";
   in [
@@ -55,11 +55,10 @@ in {
     (mkKeymap "n" "<leader>cw" "zw" "Mark as wrong")
     (mkKeymap "n" "<leader>cr" "zr" "Mark as rare") # Correct but rarely used
     (mkKeymap "n" "<leader>cu" "zuw" "Undo mark")
-    (mkKeymap "n" "<leader>cp" ":WhichKey z=<cr>" "See suggestions")
-    (mkKeymap "n" "<leader>cn" "]s" "Next misspelled word")
-    (mkKeymap "n" "<leader>cN" "]s" "Previous misspelled word")
+    (mkKeymap "n" "<leader>cp" ":WhichKey z=<cr>" "Suggestions")
+    (mkKeymap "n" "<leader>cn" "]s" "Next misspelled")
+    (mkKeymap "n" "<leader>cN" "[s" "Previous misspelled")
     (mkKeymap "n" "<leader>cC" ":runtime spell/cleanadd.vim | noh<cr>" "Clean spell file")
-    (mkKeymap "n" "<leader>cs" ":mkspell! %<cr>" "Save .add file")
     (mkKeymap "n" "<leader>cc" ":setlocal spell!<cr>" "Toggle spellcheck")
   ];
 

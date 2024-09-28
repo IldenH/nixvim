@@ -4,4 +4,6 @@
     ./ui
     ./utils
   ];
+
+  plugins.web-devicons.enable = true;
 }

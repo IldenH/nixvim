@@ -14,7 +14,7 @@
     # LSPs and formatters should be installed through devshells
     enable = true;
     servers = {
-      tsserver = {
+      ts-ls = {
         enable = true;
         package = null;
       };
@@ -101,21 +101,23 @@
 
   plugins.conform-nvim = {
     enable = true;
-    formatOnSave = {
-      lspFallback = true;
-      timeoutMs = 500;
-    };
-    formattersByFt = {
-      html = ["prettierd"];
-      css = ["prettierd"];
-      javascript = ["prettierd"];
-      javascriptreact = ["prettierd"];
-      typescript = ["prettierd"];
-      python = ["black"];
-      lua = ["stylua"];
-      nix = ["alejandra"];
-      markdown = ["prettierd"];
-      rust = ["rustfmt"];
+    settings = {
+      format_on_save = {
+        lspFallback = true;
+        timeoutMs = 500;
+      };
+      formatters_by_ft = {
+        html = ["prettierd"];
+        css = ["prettierd"];
+        javascript = ["prettierd"];
+        javascriptreact = ["prettierd"];
+        typescript = ["prettierd"];
+        python = ["black"];
+        lua = ["stylua"];
+        nix = ["alejandra"];
+        markdown = ["prettierd"];
+        rust = ["rustfmt"];
+      };
     };
   };
 }

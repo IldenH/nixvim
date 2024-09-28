@@ -48,6 +48,15 @@
             return name
           end
         '';
+
+      # prefix for images
+      image_name_func =
+        # lua
+        ''
+          function()
+            return tostring(os.date("!%Y%m%dT%H%M")) .. "-"
+          end
+        '';
     };
   };
 
@@ -59,7 +68,7 @@
     (mkKeymap "n" "<leader>on" "<cmd>ObsidianNew<cr>" " New note")
     (mkKeymap "n" "<leader>op" "<cmd>ObsidianOpen<cr>" " Open")
     (mkKeymap "n" "<leader>or" "<cmd>ObsidianRename<cr>" "󱇨 Rename")
-    (mkKeymap "x" "<leader>oe" ":ObsidianExtractNote<cr>" "󰩭 Extract note")
+    (mkKeymap "x" "<leader>oe" "<cmd>ObsidianExtractNote<cr>" "󰩭 Extract note")
     (mkKeymap "n" "<leader>ob" "<cmd>ObsidianBacklinks<cr>" " Backlinks")
     (mkKeymap "n" "<leader>of" "<cmd>ObsidianQuickSwitch<cr>" " Find")
     (mkKeymap "n" "<leader>os" "<cmd>ObsidianSearch<cr>" " Search")

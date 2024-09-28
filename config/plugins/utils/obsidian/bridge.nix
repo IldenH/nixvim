@@ -20,7 +20,17 @@
       })
     '';
 
+  # can't figure out some good way to enable bridge if obsidian is open
+  # extraConfigVim = ''
+  #   augroup obsidian_bridge
+  #     autocmd!
+  #     autocmd BufReadPre *.md silent ObsidianBridgeOff
+  #     autocmd BufNewFile *.md silent ObsidianBridgeOff
+  #   augroup END
+  # '';
+
   keymaps = [
-    (mkKeymap "n" "<leader>og" ":ObsidianBridgeOpenGraph<cr>" "󰡷 Graph")
+    (mkKeymap "n" "<leader>og" "<cmd>ObsidianBridgeOpenGraph<cr>" "󰡷 Graph")
+    (mkKeymap "n" "<leader>oB" "<cmd>ObsidianBridgeToggle<cr>" "Toggle Bridge") # TODO: enable when obsidian is open else disable
   ];
 }

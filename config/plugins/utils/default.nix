@@ -10,6 +10,7 @@
     ./sessions.nix
     ./telescope.nix
     ./which-key.nix
+    ./zotcite.nix
   ];
 
   plugins = {

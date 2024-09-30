@@ -38,6 +38,16 @@
       url = "github:VidocqH/data-viewer.nvim";
       flake = false;
     };
+
+    zotcite = {
+      url = "github:jalvesaq/zotcite";
+      flake = false;
+    };
+
+    cmp-zotcite = {
+      url = "github:jalvesaq/cmp-zotcite";
+      flake = false;
+    };
   };
 
   outputs = {

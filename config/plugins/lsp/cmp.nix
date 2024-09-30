@@ -28,6 +28,7 @@
           {name = "nerdfont";}
           {name = "vimtex";}
           # {name = "spell";} # laggy sometimes
+          {name = "zotcite";}
         ];
 
         snippet.expand =
@@ -121,6 +122,10 @@
     (buildVimPlugin {
       name = "cmp-vimtex";
       src = inputs.cmp-vimtex;
+    })
+    (buildVimPlugin {
+      name = "cmp-zotcite";
+      src = inputs.cmp-zotcite;
     })
   ];
 }

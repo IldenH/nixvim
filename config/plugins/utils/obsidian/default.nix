@@ -75,5 +75,6 @@
     (mkKeymap "n" "<leader>od" "<cmd>ObsidianDailies<cr>" " Dailies")
     (mkKeymap "n" "<leader>ot" "<cmd>ObsidianToday<cr>" " Today")
     (mkKeymap "n" "<leader>oi" "<cmd>ObsidianPasteImg<cr>" " Paste img")
+    (mkKeymap "n" "<leader>oa" "<cmd>ObsidianTags<cr>" " Tags")
   ];
 }

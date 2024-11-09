@@ -1,6 +1,7 @@
 {
   mkKeymap,
   mkRegistration,
+  pkgs,
   ...
 }: {
   imports = [
@@ -11,75 +12,33 @@
   ];
 
   plugins.lsp = {
-    # LSPs and formatters should be installed through devshells
     enable = true;
     servers = {
-      ts-ls = {
-        enable = true;
-        package = null;
-      };
-      cssls = {
-        enable = true;
-        package = null;
-      };
-      emmet-ls = {
-        enable = true;
-        package = null;
-      };
-      eslint = {
-        enable = true;
-        package = null;
-      };
-      pyright = {
-        enable = true;
-        package = null;
-      };
-      lua-ls = {
-        enable = true;
-        package = null;
-      };
-      jsonls = {
-        enable = true;
-        package = null;
-      };
+      ts-ls.enable = true;
+      cssls.enable = true;
+      emmet-ls.enable = true;
+      eslint.enable = true;
+      pyright.enable = true;
+      lua-ls.enable = true;
+      jsonls.enable = true;
       nixd = {
         enable = true;
-        package = null;
         settings = {
           diagnostic.suppress = ["sema-escaping-with" "var-bind-to-this"];
         };
       };
       rust-analyzer = {
         enable = true;
-        package = null;
         installCargo = false;
         installRustc = false;
         settings.check.command = "clippy";
       };
-      hls = {
-        enable = true;
-        package = null;
-      };
-      gopls = {
-        enable = true;
-        package = null;
-      };
-      svelte = {
-        enable = true;
-        package = null;
-      };
-      tailwindcss = {
-        enable = true;
-        package = null;
-      };
-      html = {
-        enable = true;
-        package = null;
-      };
-      elixirls = {
-        enable = true;
-        package = null;
-      };
+      hls.enable = true;
+      gopls.enable = true;
+      svelte.enable = true;
+      tailwindcss.enable = true;
+      html.enable = true;
+      elixirls.enable = true;
     };
 
     keymaps = {
@@ -113,6 +72,16 @@
   keymaps = [
     (mkKeymap "n" "<leader>lR" "<cmd>LspRestart<cr>" "Restart")
     (mkKeymap "n" "<leader>lI" "<cmd>LspInfo<cr>" "Info")
+  ];
+
+  extraPackages = [
+    pkgs.codespell
+    pkgs.prettierd
+    pkgs.black
+    pkgs.stylua
+    pkgs.alejandra
+    pkgs.rustfmt
+    pkgs.ormolu
   ];
 
   plugins.conform-nvim = {

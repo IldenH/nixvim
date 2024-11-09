@@ -64,6 +64,22 @@
         enable = true;
         package = null;
       };
+      svelte = {
+        enable = true;
+        package = null;
+      };
+      tailwindcss = {
+        enable = true;
+        package = null;
+      };
+      html = {
+        enable = true;
+        package = null;
+      };
+      elixirls = {
+        enable = true;
+        package = null;
+      };
     };
 
     keymaps = {
@@ -102,11 +118,16 @@
   plugins.conform-nvim = {
     enable = true;
     settings = {
+      notify_no_formatters = false;
+      notify_no_error = false;
+      log_level = "off";
       format_on_save = {
         lspFallback = true;
-        timeoutMs = 500;
+        timeoutMs = 0;
+        quiet = true;
       };
       formatters_by_ft = {
+        "*" = ["codespell"];
         html = ["prettierd"];
         css = ["prettierd"];
         javascript = ["prettierd"];
@@ -117,6 +138,8 @@
         nix = ["alejandra"];
         markdown = ["prettierd"];
         rust = ["rustfmt"];
+        svelte = ["prettierd"];
+        haskell = ["ormolu"];
       };
     };
   };

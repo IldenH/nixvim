@@ -1,7 +1,7 @@
 {
   plugins.lualine = {
     enable = true;
-    settings = {
+    settings.options = {
       section_separators = {
         right = "";
         left = "";

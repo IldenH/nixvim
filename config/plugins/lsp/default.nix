@@ -75,7 +75,6 @@
   ];
 
   extraPackages = [
-    pkgs.codespell
     pkgs.prettierd
     pkgs.black
     pkgs.stylua
@@ -96,7 +95,6 @@
         quiet = true;
       };
       formatters_by_ft = {
-        "*" = ["codespell"];
         html = ["prettierd"];
         css = ["prettierd"];
         javascript = ["prettierd"];
